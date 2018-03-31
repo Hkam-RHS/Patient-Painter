@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <pnk href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+    }
+
+    .fade-in {
+        -webkit-animation: fade-in 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 10vh;
+        margin-top: 5vh;
+    }
+    .fade-in-part-2 {
+        -webkit-animation: fade-in 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2vh;
+        margin-top: 5vh;
+        animation-delay: 3ss;
+    }
+.btn {
+        -webkit-border-radius: 4;
+        -moz-border-radius: 4;
+        border-radius: 4px;
+        font-family: 'Josefin Sans', sans-serif;
+        color: #ffffff;
+        font-size: 12px;
+        background: #76d934;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background: #4fad30;
+        text-decoration: none;
+    }
+
+    @-webkit-keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in-part-2 {
+        0% {
+            opacity: 0
+        }
+        100% {
+            opacity: 1
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div class='fade-in'>
+        <span>Patient Painter</span>
+    </div>
+    <div class='fade-in-part-2'>
+        <span>Instructions:</span>
+        
+            <p>The faster you move the mouse, the wider the line will be.</p>
+            <p>You can pick your color using the picker on the left.</p>
+             <p>Draw Mode returns you to drawing mode.</p>
+
+             <p>Clear All will clear the entire screen.</p>
+
+            <p>Click on Save Painting to download your artwork to your computer.</p>
+
+        <button class='btn' onclick="location.href='paint_v3touch.html'">START</button>
+    </div>
+</center>
+
+</body>
+
+</html>
