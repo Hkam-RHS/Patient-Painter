@@ -4,7 +4,11 @@
  var vw = window.innerWidth;
  var vh = window.innerHeight;
  var value = 'black';
- var width = 1;
+ var brush = [
+ 1,
+ 3,
+ 5,
+ 10,20,25,30];
 
  var Mode = ["Draw Mode", "Clear all"];
 
@@ -17,7 +21,7 @@
      background('white');
      stroke(0, 50);
      gui = createGui('MENU', 0, 0);
-     gui.addGlobals('picker', 'Mode');
+     gui.addGlobals('picker', 'Mode','brush');
 
  }
 
@@ -29,8 +33,8 @@
 
 
  function touchMoved() {
-     var weight = dist(mouseX, mouseY, pmouseX, pmouseY);
-     strokeWeight(weight);
+     //var weight = dist(mouseX, mouseY, pmouseX, pmouseY);
+     strokeWeight(brush);
      stroke(color(picker));
      line(mouseX, mouseY, pmouseX, pmouseY);
 
@@ -45,8 +49,8 @@
 
  function draw() {
      if (mouseIsPressed) {
-         var weight = dist(mouseX, mouseY, pmouseX, pmouseY);
-         strokeWeight(weight);
+         //var weight = dist(mouseX, mouseY, pmouseX, pmouseY);
+         strokeWeight(brush);
          stroke(color(picker));
          line(mouseX, mouseY, pmouseX, pmouseY);
      } else {
