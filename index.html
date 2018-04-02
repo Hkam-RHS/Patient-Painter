@@ -1,31 +1,34 @@
 <html>
 
 <head>
-    <pnk href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <style>
     body {
         margin: 0;
     }
 
-    .fade-in {
-        -webkit-animation: fade-in 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    .text-pop-up-top {
+        -webkit-animation: text-pop-up-top 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+        animation: text-pop-up-top 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 10vh;
-        margin-top: 5vh;
+        color: white;
+        font-size: 40px;
+        padding-top: 5vh;
     }
-    .fade-in-part-2 {
-        -webkit-animation: fade-in 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    .instructions {
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 2vh;
-        margin-top: 5vh;
-        animation-delay: 3ss;
+        color: gray;
+        font-size: 20px;
+        padding-top: 1vh;
     }
-.btn {
+
+
+    .btn {
         -webkit-border-radius: 4;
         -moz-border-radius: 4;
         border-radius: 4px;
+        border-color: white;
         font-family: 'Josefin Sans', sans-serif;
         color: #ffffff;
         font-size: 12px;
@@ -39,21 +42,20 @@
         text-decoration: none;
     }
 
-    @-webkit-keyframes fade-in {
+    @-webkit-keyframes text-pop-up-top {
         0% {
-            opacity: 0;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            text-shadow: none;
         }
         100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fade-in-part-2 {
-        0% {
-            opacity: 0
-        }
-        100% {
-            opacity: 1
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
         }
     }
     </style>
@@ -61,25 +63,21 @@
 
 <body>
     <center>
-    <div class='fade-in'>
-        <span>Patient Painter</span>
-    </div>
-    <div class='fade-in-part-2'>
-        <span>Instructions:</span>
-        
-            <p>The faster you move the mouse, the wider the line will be.</p>
+        <div class='text-pop-up-top'>
+            <h1>Patient Painter</h1>
+        </div>
+        <hr>
+        <div class='instructions'>
+            <h2>Instructions:</h2>
+    
             <p>You can pick your color using the picker.</p>
-             <p>Draw Mode returns you to drawing mode.</p>
-             <p>Choose a predetermined brush size</p>
-
-             <p>Clear All will clear the entire screen.</p>
-
+            <p>Draw Mode returns you to drawing mode.</p>
+            <p>Choose a predetermined brush size</p>
+            <p>Clear All will clear the entire screen.</p>
             <p>Click on Save Painting to download your artwork to your computer.</p>
-
-        <button class='btn' onclick="location.href='paint_v3touch.html'">START</button>
-    </div>
-</center>
-
+            <button class='btn' onclick="location.href='paint_v3touch.html'">START</button>
+        </div>
+    </center>
 </body>
 
 </html>

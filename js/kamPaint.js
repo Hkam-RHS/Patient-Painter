@@ -31,6 +31,12 @@
          clear();
          break;
  }
+
+  function keyTyped() {
+        if (key === 's') {
+            save('myDrawing.jpg');
+        }
+    }
  function draw() {
      if (mouseIsPressed) {
          //var weight = dist(mouseX, mouseY, pmouseX, pmouseY);
